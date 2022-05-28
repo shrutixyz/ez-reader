@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/pdf.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../static/pdf.js"></script>
+   <div class="parent">
+       <div>
+        
+            <input type="checkbox" id="toggle_checkbox" onclick="changemode()">
+        <label for="toggle_checkbox"></label>
+       
+       
+           <p>sticky notes</p>
+           <p>new note</p>
+       </div>
+       <iframe id="pdfframe" src="http://www.africau.edu/images/default/sample.pdf" ></iframe>
+       <div>
+           <p>Timer</p>
+           <input type="number" placeholder="enter minutes"> <br>
+           <button>start</button>
+           <button class="summarize">summarize your notes</button>
+       </div>
+   </div>
+</body>
+</html>
