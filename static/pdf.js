@@ -56,5 +56,48 @@ function newNote(){
 }
 
 function checknotes(){
+    //clear localstorage
     
 }
+
+
+const stickyButton = document.querySelector(".submit-sticky");
+const stickyDiv = document.querySelector(".sticky-parent");
+const inputPage = document.querySelector(".input-page");
+const inputSticky = document.querySelector(".input-sticky");
+
+const addBtn = document.querySelector(".add-btn")
+
+
+addBtn.addEventListener('click', e => {
+    
+    stickyDiv.style.visibility = "visible"
+
+    
+
+})
+
+stickyButton.addEventListener("click", e => {
+    stickyDiv.style.visibility = "hidden"
+    let sticky = inputSticky.value
+    let page = inputPage.value
+    let len;
+
+    //save to localstorage
+    let notes = localStorage.getItem('notes')
+    let notesObj = JSON.parse(notes)
+    console.log(notesObj)
+    if(!notesObj){
+        len = 0
+        notesObj = {}
+    }else {
+        len =  notesObj.length
+    }
+    
+    
+    notesObj[len] = page + "-" + sticky
+    localStorage.setItem("notes", JSON.stringify(notesObj))
+
+    inputPage.value = ""
+    inputSticky.value = ""
+})

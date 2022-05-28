@@ -13,15 +13,23 @@ iframe{
     max-height: 100%;
 }
 
-
-.parent{
-    display: flex;
-    justify-content: space-between;
+.sticky-parent{
+  position:  absolute;
+  left: 40%;
+  top: 30%;
+  background-color: #0F0E0E;
+  visibility: hidden;
 }
 
-* {
-    -webkit-tap-highlight-color: transparent;
-  }
+.parent{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+*{
+  -webkit-tap-highlight-color: transparent;
+}
   
  
   
@@ -144,6 +152,7 @@ a:visited {
 }
 
 
+
 a.button {
    
   display: block;
@@ -160,7 +169,7 @@ a.button {
   transition: all 0.2s ;
 }
 
-.btnBlueGreen {
+.btnBlueGreen, .submit-sticky {
   background: #00AE68;
 }
 

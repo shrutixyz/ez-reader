@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body onload="checknotes()">
-    <script src="../static/pdf.js"></script>
+    
    <div class="parent">
        <div class="col col-left" > 
         
@@ -17,9 +17,9 @@
        
        
            <div class="sticky">
-<p>32</p>
+                <p>32</p>
            </div>
-           <img src="../static/add.svg" alt="" height="80rem" style="margin-bottom: 2rem; cursor: pointer;" onclick="newNote()">
+           <img class="add-btn" src="../static/add.svg" alt="" height="80rem" style="margin-bottom: 2rem; cursor: pointer;">
        </div>
        <iframe id="pdfframe" src="{{name}}" ></iframe>
        <div class="col">
@@ -32,8 +32,30 @@
            <div style="cursor: pointer" onclick="showAlert()">
             <a class="button btnFloat btnBlueGreen">summarize your notes</a>
           </div>
+
        </div>
+
+  
+
    </div>
+   <center>
+
+        <div class="sticky-parent">
+
+            <input type="number" class="input-page" />
+            <br> <br>
+            <textarea rows="20" cols="50" class="input-sticky" placeholder="enter your text here" name="text" id="text" > 
+        
+            </textarea>
+
+            <br>
+
+            <button class="submit-sticky">Submit</button>
+           
+       </div>
+
+   </center>
+   
 
    <div class="dialog" id="dialog">
 <form action="/summary" method="POST" >
@@ -43,6 +65,9 @@
         <button type="submit" class="button btnFloat btnBlueGreen">submit</button>
 </form>
    </div>
+   
+   
+<script src="../static/pdf.js"></script>
    <script src="../static/timer.js"></script>
 </body>
 </html>
