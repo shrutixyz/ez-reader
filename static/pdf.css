@@ -145,6 +145,7 @@ iframe{
 
 
 
+
 a,
 a:visited {
   text-decoration: none;
@@ -236,15 +237,33 @@ button{
   justify-content: space-between;
 }
 
+.stickyHolder {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .sticky{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
-  width: 3rem;
+  max-width: 150px;
   background-color: rgb(69, 204, 69);
-  position: absolute;
-  left: 0;
-  top: 20%;
+  margin: 5px;
+  padding: 5px;
   color: white;
+}
+
+.tooltip{
+  word-wrap: break-word;
+}
+
+.tooltiptext {
+  display: none;
+}
+
+.sticky:hover .tooltiptext{
+  display: block;
+}
+.sticky:hover .tooltip{
+  display: none;
 }

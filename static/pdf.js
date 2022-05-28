@@ -1,4 +1,33 @@
+const stickyHolder = document.querySelector(".stickyHolder")
 
+
+function loadStickyNotes(){
+
+    let notes = localStorage.getItem('notes')
+    let notesObj = JSON.parse(notes)
+    console.log(notesObj)
+    let content = ""
+    stickyHolder.innerHTML = ""
+    for(let i=0; i < Object.keys(notesObj).length; i++){
+        console.log("here")
+        content += `
+        <div class="sticky">
+        <p class="tooltip">${notesObj[i].split("-")[0]}</p>
+        <span class="tooltiptext">${notesObj[i].split("-")[1]}</span>
+       </div>
+        
+        `
+
+    }
+
+    console.log(content)
+
+    stickyHolder.innerHTML = content
+
+
+}
+
+loadStickyNotes()
 
 
 function changemode(){
@@ -91,13 +120,14 @@ stickyButton.addEventListener("click", e => {
         len = 0
         notesObj = {}
     }else {
-        len =  notesObj.length
+        len =  Object.keys(notesObj).length
     }
     
-    
+    console.log
     notesObj[len] = page + "-" + sticky
     localStorage.setItem("notes", JSON.stringify(notesObj))
 
     inputPage.value = ""
     inputSticky.value = ""
+    loadStickyNotes()
 })
