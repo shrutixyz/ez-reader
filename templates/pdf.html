@@ -19,15 +19,17 @@
            <p>sticky notes</p>
            <p>new note</p>
        </div>
-       <iframe id="pdfframe" src="http://www.africau.edu/images/default/sample.pdf" ></iframe>
+       <iframe id="pdfframe" src="{{name}}" ></iframe>
        <div>
-           <div id="timerbox">
-            <p>Timer</p>
-            <input type="number" placeholder="enter minutes" class="inputhehe" id="timemins">
-           </div> <br>
-           <button onclick="startTimer()">start 30 minutes timer</button>
+           
+          <div class="timerbtn" onclick="startTimer()">
+            <a class="button btnFloat btnBlueGreen">start 30 minutes timer</a>
+          </div>
+
            <div id="timer" data-hours="0" data-minutes="30" data-seconds="0"></div>
-           <button class="summarize" onclick="showAlert()">summarize your notes</button>
+           <div style="cursor: pointer" onclick="showAlert()">
+            <a class="button btnFloat btnBlueGreen">summarize your notes</a>
+          </div>
        </div>
    </div>
 
@@ -36,7 +38,7 @@
     <textarea rows="20" cols="50" class="input-sum" placeholder="enter your text here" name="text" id="text" > 
      
         </textarea>
-        <button type="submit">submit</button>
+        <button type="submit" class="button btnFloat btnBlueGreen">submit</button>
 </form>
    </div>
    <script src="../static/timer.js"></script>

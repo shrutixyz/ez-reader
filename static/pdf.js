@@ -4,7 +4,12 @@
 function changemode(){
 
  var status =   document.getElementById('toggle_checkbox');
-var x = localStorage.getItem('pdf-mode').toString();
+try{
+    var x = localStorage.getItem('pdf-mode').toString();
+}
+catch{
+    localStorage.setItem('pdf-mode', 'dark')
+}
 
 console.log(status.chekce)
 if(status.checked == true){
@@ -32,13 +37,13 @@ function showAlert() {
 
 
 function startTimer(){
-    var x = document.getElementById('timerbox');
-    x.style.display = 'none';
+    // var x = document.getElementById('timerbox');
+    // x.style.display = 'none';
     console.log("lmaoo")
 
     var y = document.getElementById('timer');
-    console.log(document.getElementById('timemins').value)
-    y.setAttribute('data-minutes', parseInt(document.getElementById('timemins').value)) 
+    // console.log(document.getElementById('timemins').value)
+    // y.setAttribute('data-minutes', parseInt(document.getElementById('timemins').value)) 
     // dataMinutes = 
     
     y.style.display = 'block'
