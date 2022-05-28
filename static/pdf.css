@@ -8,7 +8,7 @@ body, html{
 }
 
 iframe{
-    height: 100vh;
+    height: 99vh;
     width: 50vw;
     max-height: 100%;
 }
@@ -99,6 +99,7 @@ iframe{
 
 
   .dialog{
+    
       display: none;
       height: 60vh;
       width: 60vw;
@@ -113,6 +114,8 @@ iframe{
 
 
   .input-sum{
+    outline: none;
+    border-radius: 0.5rem;
       height: 50vh;
       width: 60vw;
       background-color: rgb(15, 15, 34);
@@ -145,7 +148,7 @@ a.button {
    
   display: block;
   position: relative;
-  float: left;
+  /* float: right; */
   width: 200px;
   padding: 0;
   margin: 10px 20px 10px 0;
@@ -210,4 +213,29 @@ button{
     color: white;
     font-size: 1.5rem;
     padding-bottom: 1rem;
+}
+
+
+.col{
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-left{
+  justify-content: space-between;
+}
+
+.sticky{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  background-color: rgb(69, 204, 69);
+  position: absolute;
+  left: 0;
+  top: 20%;
+  color: white;
 }

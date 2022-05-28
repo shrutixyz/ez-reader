@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="../static/pdf.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="checknotes()">
     <script src="../static/pdf.js"></script>
    <div class="parent">
-       <div>
+       <div class="col col-left" > 
         
             <input type="checkbox" id="toggle_checkbox" onclick="changemode()">
         <label for="toggle_checkbox"></label>
        
        
-           <p>sticky notes</p>
-           <p>new note</p>
+           <div class="sticky">
+<p>32</p>
+           </div>
+           <img src="../static/add.svg" alt="" height="80rem" style="margin-bottom: 2rem; cursor: pointer;" onclick="newNote()">
        </div>
        <iframe id="pdfframe" src="{{name}}" ></iframe>
-       <div>
+       <div class="col">
            
           <div class="timerbtn" onclick="startTimer()">
             <a class="button btnFloat btnBlueGreen">start 30 minutes timer</a>

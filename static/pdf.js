@@ -48,3 +48,13 @@ function startTimer(){
     
     y.style.display = 'block'
 }
+
+
+function newNote(){
+    prompt("Enter page number")
+    prompt("Enter note")
+}
+
+function checknotes(){
+    
+}
