@@ -83,7 +83,7 @@ iframe{
   }
 
 
-  input{
+  .inputhehe{
       margin-right: 3rem;
       /* margin-top: 3rem; */
       text-align: center;
@@ -96,3 +96,36 @@ iframe{
       bottom: 10rem;
       margin-right: 4rem;
   }
+
+
+  .dialog{
+      display: none;
+      height: 60vh;
+      width: 60vw;
+      /* background-color: rgb(15, 15, 34); */
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+  }
+
+
+
+  .input-sum{
+      height: 50vh;
+      width: 60vw;
+      background-color: rgb(15, 15, 34);
+      color: white;
+  }
+
+
+
+.time {
+  width: 30%;
+  display: inline;
+}
+
+#timer{
+    display: none;
+}

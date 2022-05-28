@@ -1,7 +1,7 @@
 
 
 from flask import Flask, render_template, request
-
+from summarizer import generate_summary
 
 app = Flask(__name__)
 
@@ -23,6 +23,21 @@ def submit():
         file = request.files.get('sent_file')
         print("lmao")
         file.save('static/lmao.pdf')
+    return render_template('pdf.html', name ='static/lmao.pdf' )
+
+
+@app.route('/summary', methods=['GET', 'POST'])
+def summary():
+    if request.method == 'POST':
+        print("lol")
+        text = request.form.get('text')
+        count=0
+        for i in text:
+            if i=='.':
+                count+=1
+        x = generate_summary(int(count/4), text)
+        print(x)
+        # print(text)
     return render_template('pdf.html', name ='static/lmao.pdf' )
 
 

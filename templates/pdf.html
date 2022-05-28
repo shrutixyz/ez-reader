@@ -21,11 +21,24 @@
        </div>
        <iframe id="pdfframe" src="http://www.africau.edu/images/default/sample.pdf" ></iframe>
        <div>
-           <p>Timer</p>
-           <input type="number" placeholder="enter minutes"> <br>
-           <button>start</button>
-           <button class="summarize">summarize your notes</button>
+           <div id="timerbox">
+            <p>Timer</p>
+            <input type="number" placeholder="enter minutes" class="inputhehe" id="timemins">
+           </div> <br>
+           <button onclick="startTimer()">start 30 minutes timer</button>
+           <div id="timer" data-hours="0" data-minutes="30" data-seconds="0"></div>
+           <button class="summarize" onclick="showAlert()">summarize your notes</button>
        </div>
    </div>
+
+   <div class="dialog" id="dialog">
+<form action="/summary" method="POST" >
+    <textarea rows="20" cols="50" class="input-sum" placeholder="enter your text here" name="text" id="text" > 
+     
+        </textarea>
+        <button type="submit">submit</button>
+</form>
+   </div>
+   <script src="../static/timer.js"></script>
 </body>
 </html>

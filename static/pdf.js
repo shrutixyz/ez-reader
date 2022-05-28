@@ -22,3 +22,24 @@ else{
 console.log(x);
     
 }
+
+
+
+function showAlert() {
+  document.getElementById('dialog').style.display = 'block'
+}
+
+
+
+function startTimer(){
+    var x = document.getElementById('timerbox');
+    x.style.display = 'none';
+    console.log("lmaoo")
+
+    var y = document.getElementById('timer');
+    console.log(document.getElementById('timemins').value)
+    y.setAttribute('data-minutes', parseInt(document.getElementById('timemins').value)) 
+    // dataMinutes = 
+    
+    y.style.display = 'block'
+}
