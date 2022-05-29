@@ -10,6 +10,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/app')
+def approute():
+    return app
+
 @app.route('/pdf')
 def pdf():
     return render_template('pdf.html')    
