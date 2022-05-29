@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="../static/index.css">
     <title>ez reader</title>
 </head>
-<body>
-    <div class="parent">
+<script>
+    function checkMobile(){
+        const isMobile = navigator.userAgentData.mobile;
+        if(isMobile){
+document.getElementById('parent').style.display = 'none';
+document.getElementById('mobileyet').style.display = 'flex';
+        }
+    }
+</script>
+<body onload="checkMobile()">
+    <div class="parent" id="parent">
         <h1>EZ READER</h1>
         <div style="width: 50vw">
             <p>an accessible pdf reader with dark mode, sticky notes, timer and notes summarizer. Choose file and get started</p></div>
@@ -18,7 +27,11 @@
         <button type="submit">submit</button>
     </form>
     <img class="blob" src="../static/blob.svg" alt="">
-    <img class="mobile" src="../static/mobile.svg" alt="">
+    <img class="mobile" src="../static/laptop.png" alt="">
+    </div>
+
+    <div class="mobileyet" id="mobileyet">
+        <p>ez reader is not available on mobiles yet!</p>
     </div>
 </body>
 </html>
