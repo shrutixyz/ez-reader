@@ -246,18 +246,19 @@ button{
 .sticky{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100px;
   height: 150px;
   border-radius: 0.5rem;
-  overflow: scroll;
   background-color: #00AE68;
   margin: 5px;
+  overflow-y: scroll;
+  text-align: start;
+
   padding: 0.5rem 0.25rem;
   color: white;
-  /* overflow-y: auto; */
-  /* white-space: ; */
-  /* overflow: scroll; */
+  /* word-wrap: break-word;
+  word-break: break-word; */
 }
 
 ::-webkit-scrollbar {
@@ -268,10 +269,12 @@ button{
 }
 
 .tooltiptext {
+  
   display: none;
 }
 
 .sticky:hover .tooltiptext{
+  
   display: block;
 }
 .sticky:hover .tooltip{
