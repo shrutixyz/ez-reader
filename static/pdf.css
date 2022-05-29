@@ -14,10 +14,11 @@ iframe{
 }
 
 .sticky-parent{
+  border-radius: 0.5rem;
   position:  absolute;
   left: 40%;
   top: 30%;
-  background-color: #0F0E0E;
+  background-color: rgb(15, 15, 34);
   visibility: hidden;
 }
 
