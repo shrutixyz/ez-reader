@@ -246,15 +246,22 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 200px;
+  width: 100px;
+  height: 150px;
+  border-radius: 0.5rem;
   overflow: scroll;
-  background-color: rgb(69, 204, 69);
+  background-color: #00AE68;
   margin: 5px;
   padding: 0.5rem 0.25rem;
   color: white;
+  /* overflow-y: auto; */
+  /* white-space: ; */
+  /* overflow: scroll; */
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 .tooltip{
   word-wrap: break-word;
 }
