@@ -246,10 +246,12 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 150px;
+  width: 150px;
+  height: 200px;
+  overflow: scroll;
   background-color: rgb(69, 204, 69);
   margin: 5px;
-  padding: 5px;
+  padding: 0.5rem 0.25rem;
   color: white;
 }
 

@@ -4,7 +4,8 @@ const stickyHolder = document.querySelector(".stickyHolder")
 function loadStickyNotes(){
 
     let notes = localStorage.getItem('notes')
-    let notesObj = JSON.parse(notes)
+    if(notes){
+        let notesObj = JSON.parse(notes)
     console.log(notesObj)
     let content = ""
     stickyHolder.innerHTML = ""
@@ -25,6 +26,9 @@ function loadStickyNotes(){
     stickyHolder.innerHTML = content
 
 
+
+    }
+    
 }
 
 loadStickyNotes()
